@@ -28,8 +28,7 @@ vector<double> setMeshGrid(double x0, double xN, double dx) {
     return x;
 }
 
-//"X:\Projects\eigen-3.4.0"
-//g++ -std=c++17 -I "X:\Projects\eigen-3.4.0" -o main.exe main.cpp
+
 
 
 double calculateDiffusionCriterion(double alpha, double xStep, double tStep) {
@@ -86,9 +85,7 @@ void solver(double alpha, double dx, double dt, double tStop) {
         return;
     }
 
-    // Write a proper header
-    outfile << "x,u\n";
-    // Write the data row by row
+    outfile << "x,u\n"; //Add header to .csv output file
     for (int i = 0; i < meshSize; ++i) {
         outfile << x[i] << "," << uKcurrent[i] << "\n";
     }
